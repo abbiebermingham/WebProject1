@@ -92,12 +92,12 @@ const filteredArticles = computed(() => {
 <template>
   <div class="page">
 
-    <!-- Navigation bar -->
+    // Navigation bar 
     <Navbar />
 
     <main>
 
-      <!-- Welcome message and search -->
+      // Welcome message and search 
       <div class="top-section">
 
         <WelcomeSection />
@@ -106,22 +106,22 @@ const filteredArticles = computed(() => {
 
       </div>
 
-      <!-- Article heading -->
+      // Article heading 
       <h2>The latest from ReelTalks:</h2>
 
-      <!-- Filter buttons -->
+      // Filter button
       <FilterButtons
           v-model="selectedFilter"
       />
 
-      <!-- Movie article cards -->
+      // Movie article cards
       <ArticleList
           :articles="filteredArticles"
       />
 
     </main>
 
-    <!-- Footer -->
+    // Footer 
     <footer></footer>
 
   </div>
