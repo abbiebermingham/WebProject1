@@ -1,48 +1,47 @@
 
+<!-- src/components/NavBar.vue -->
 <template>
-  <header class="navbar">
-
-    <div class="logo">
-      MovieTalk
+  <nav class="navbar">
+    <RouterLink to="/" class="logo">MovieTalk</RouterLink>
+    <div class="links">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/reviews">Reviews</RouterLink>
+      <RouterLink to="/watchlist">Watchlist</RouterLink>
     </div>
-
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Reviews</a>
-      <a href="#">My Watchlist</a>
-    </nav>
-
-  </header>
+  </nav>
 </template>
 
 <style scoped>
 .navbar {
-  height: 60px;
-  background-color: #55b5ef;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 35px;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  height: 75px;
+  background: #57b4f0;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+}
+
+.links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links a.router-link-exact-active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .logo {
-  font-size: 20px;
-  color: black;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-  margin-right: 35%;
-}
-
-nav a {
-  font-size: 11px;
-  color: #333;
+  color: #000;
   text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
+  font-size: 24px;
 }
 </style>
