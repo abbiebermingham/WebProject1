@@ -2,7 +2,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-
+import Navbar from '../components/NavBar.vue'
 import WelcomeSection from '../components/WelcomeSection.vue'
 import SearchBar from '../components/SearchBar.vue'
 import FilterButtons from '../components/FilterButtons.vue'
@@ -91,6 +91,9 @@ const filteredArticles = computed(() => {
 
 <template>
   <div class="page">
+
+    <!-- Navigation bar -->
+    <Navbar />
 
     <main>
 
