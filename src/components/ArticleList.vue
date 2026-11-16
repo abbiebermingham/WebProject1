@@ -1,6 +1,19 @@
 
 <script setup>
 import ArticleCard from './ArticleCard.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goToArticle = (id) =>
+{
+  router.push(`/articles/${id}`
+  )
+}
+
+
+
+
 
 defineProps({
   articles: Array
@@ -14,6 +27,8 @@ defineProps({
         v-for="article in articles"
         :key="article.id"
         :article="article"
+
+        @click="goToArticle(article.id)"
     />
 
     <p v-if="articles.length === 0" class="no-results">
