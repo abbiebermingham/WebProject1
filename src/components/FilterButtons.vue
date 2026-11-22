@@ -1,28 +1,38 @@
 
+
 <script setup>
+// Receive the selected category and available categories.
 defineProps({
-  modelValue: String
+  modelValue: String,
+  categories: Array
 })
 
+// Tell HomePage when the category changes.
 defineEmits(['update:modelValue'])
-
-const filters = ['All', 'Oldest', 'Newest']
 </script>
 
 <template>
-  <div class="filters">
+  <div class="filter-container">
+    <label for="article-category">Category</label>
 
-    <button
-        v-for="filter in filters"
-        :key="filter"
-        :class="{ active: modelValue === filter }"
-        @click="$emit('update:modelValue', filter)"
+    <select
+        id="article-category"
+        :value="modelValue"
+        @change="$emit('update:modelValue', $event.target.value)"
     >
-      {{ filter }}
-    </button>
+      <option value="">All categories</option>
 
+      <option
+          v-for="category in categories"
+          :key="category"
+          :value="category"
+      >
+        {{ category }}
+      </option>
+    </select>
   </div>
 </template>
+
 
 <style scoped>
 .filters {
