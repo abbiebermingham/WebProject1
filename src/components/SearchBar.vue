@@ -1,21 +1,28 @@
 
 <script setup>
+// Receive the search value from HomePage.
 defineProps({
   modelValue: String
 })
 
+// Send the updated search value back to HomePage.
 defineEmits(['update:modelValue'])
 </script>
 
 <template>
-  <input
-      type="text"
-      placeholder="Search by name, category or genre"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
-      class="search-bar"
-  />
+  <div class="search-container">
+    <label for="article-search">Search articles</label>
+
+    <input
+        id="article-search"
+        type="search"
+        placeholder="Search articles..."
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+    />
+  </div>
 </template>
+
 
 <style scoped>
 .search-bar {
