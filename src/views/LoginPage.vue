@@ -1,85 +1,102 @@
-<script>
+
+<script setup>
 
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+
 const router = useRouter()
+
 
 const email = ref('')
 const password = ref('')
 
-const errorMessage = ref('')
 
-const showPassword = ref(false)
+ function login() {
 
-function login() {
 
-  if (
-      email.value === 'admin@movietalk.com' && password.value === 'password123'
-  ) {
-    errorMessage.value = ''
+  if (email.value !== '' && password.value !== '') {
+
 
     router.push('/')
 
-  }else{
-    errorMessage.value = 'Incorrect email or password'
+
+    alert('Login successful! Welcome to MovieTalk!')
 
   }
 }
 </script>
 
+
+
+
 <template>
-  <div class="login-page">
-   <div class="login-container">
+  <main class="login-page">
 
-     <h1>Login to MovieTalk</h1>
+    <h1>Login to MovieTalk</h1>
 
-     <p>Welcome back! Please log in</p>
+    <form @submit.prevent="login">
 
-     <form @submit.prevent="login">
+      <label>Email:</label>
+      <input
+          type="email"
+          v-model="email"
+          minlength="5"
+          maxlength="50"
+          required
+      />
 
-       <div class="form-group">
-         <label for="email">Email</label>
+      <label>Password:</label>
+      <input
+          type="password"
+          v-model="password"
+          minlength="8"
+          maxlength="20"
+          required
+      />
 
-         <input
-           id="email"
-           v-model="email"
-           type="email"
-           placeholder="Enter your email"
-           required>
-       </div>
+      <button type="submit">
+        Login
+      </button>
 
-       <div class="form-group">
-         <label for="password">Password</label>
+    </form>
 
-         <input
-           id="password"
-           v-model="password"
-           :type="showPassword ? 'text' : 'password'"
-           placeholder="Enter your password"
-           required>
-       </div>
-
-<button type="submit" class="login-btn">
-  Login
-</button>
-
-     </form>
-
-<RouterLink to="/" class="home-link">
-  Back to Home
-</RouterLink>
-
-
-   </div>
-
-
-
-  </div>
-
-
-
-
-
-
+  </main>
 </template>
+
+<style scoped>
+.login-page {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #55b4ec;
+  padding: 12px;
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
