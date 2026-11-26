@@ -1,11 +1,11 @@
 
 <script setup>
-// Receive the search value from HomePage.
+
 defineProps({
   modelValue: String
 })
 
-// Send the updated search value back to HomePage.
+
 defineEmits(['update:modelValue'])
 </script>
 

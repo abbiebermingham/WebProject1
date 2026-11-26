@@ -1,6 +1,4 @@
-
 <script setup>
-import WatchlistButton from './WatchlistButton.vue'
 defineProps({
   article: Object
 })
@@ -8,15 +6,12 @@ defineProps({
 
 <template>
   <div class="article-card">
-
     <img
         :src="article.image"
         :alt="article.title + ' movie poster'"
-        class="movie-poster"
-    />
+        class="movie-poster"/>
 
     <div class="card-info">
-
       <span class="card-title">
         {{ article.title }}
       </span>
@@ -31,7 +26,10 @@ defineProps({
 
       <p>{{ article.description }}</p>
 
-      <a href="#">See more</a>
+
+      <RouterLink :to="'/article/' + article.id">
+        See more
+      </RouterLink>
 
     </div>
 

@@ -1,42 +1,47 @@
-# webtechproject1
+MovieTalk
 
-This template should help get you started developing with Vue 3 in Vite.
+About the project:
+MovieTalk is a movie website created using Vue.js. The website allows users to browse movies, read articles, search for movies and create a watchlist
 
-## Recommended IDE Setup
+Features:
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. Homepage - Displays movie articles and information
+2. Search bar - Allows users to search for articles
+3. Filters - Allows users to sort articles by category
+4. Article Details - Users can click 'See more' to read more about a movie
+5. Watchlist - Users can add, remove and edit movies in their watchlist
+6. Login page - Includes login form with a success maessage
+7. Navigation bar - Allows users to move between pages
+8. Footer - Appears across all pages
 
-## Recommended Browser Setup
+What I used:
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+1. Vue.js
+2. JavaScript
+3. HTML
+4. CSS
+5. Vue Router
 
-## Type Support for `.vue` Imports in TS
+How to run the project:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Open the project in IntelliJ
+2. Open the terminal
+3. Enter npm install to install the required packages
+4. Enter npm run dev to start the project
+5. Opan the local host link shown in the terminal
 
-## Customize configuration
+Project Structure:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. Components - Contains reusable components such as the nav bar, search bar, filter and footer
+2. Views - Contains the different website pages
+3. Router - Controls navigation between pages
+4. Store.js - Stores shared information such as articles and watchlist items
+5. App.vue - Main component of the website
 
-## Project Setup
+Purpose:
 
-```sh
-npm install
-```
+The purpose of this project is to practise using Vue.js, components, routing, JavaScript and CSS to create an interactive article based website
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+Author:
+Abbie Bermingham
+Created as part of a Web project

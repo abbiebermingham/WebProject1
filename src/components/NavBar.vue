@@ -1,12 +1,14 @@
 
-<!-- src/components/NavBar.vue -->
+
 <template>
   <nav class="navbar">
     <RouterLink to="/" class="logo">MovieTalk</RouterLink>
     <div class="links">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/reviews">Reviews</RouterLink>
-      <RouterLink to="/watchlist">Watchlist</RouterLink>
+      <RouterLink to="/reviews">Reviews</RouterLink><RouterLink to="/watchlist">Watchlist</RouterLink>
+    <RouterLink to="Login">Login</RouterLink>
+
+
     </div>
   </nav>
 </template>

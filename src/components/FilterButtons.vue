@@ -1,13 +1,13 @@
 
 
 <script setup>
-// Receive the selected category and available categories.
+
 defineProps({
   modelValue: String,
   categories: Array
 })
 
-// Tell HomePage when the category changes.
+
 defineEmits(['update:modelValue'])
 </script>
 
